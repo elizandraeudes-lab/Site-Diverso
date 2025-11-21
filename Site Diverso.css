@@ -1,0 +1,38 @@
+.caixa-transicao {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  /* Define a transição: propriedade (all), duração (1s) */
+  transition: all 1s ease;
+}
+
+.caixa-transicao:hover {
+  /* Novo estado ao passar o mouse */
+  width: 200px;
+  background-color: red;
+  transform: rotate(180deg); /* Exemplo de transformação */
+}
+.bola-animada {
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  border-radius: 50%;
+  position: relative; /* Necessário para 'top' funcionar corretamente */
+  animation-name: pulo; /* Nome da animação */
+  animation-duration: 2s; /* Duração */
+  animation-iteration-count: infinite; /* Repetição infinita */
+  animation-timing-function: ease-in-out; /* Suavidade */
+}
+
+/* Define os estágios da animação */
+@keyframes pulo {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -50px; /* Posição mais alta (pulando) */
+  }
+  100% {
+    top: 0px; /* Volta para a posição inicial */
+  }
+}
